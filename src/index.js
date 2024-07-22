@@ -1,14 +1,15 @@
-// src/index.js
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
 import App from './App';
+import './index.css';
 
-ReactDOM.render(
+// Change the import statement for createRoot
+import { createRoot } from 'react-dom/client';
+
+// Use createRoot instead of ReactDOM.render
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );

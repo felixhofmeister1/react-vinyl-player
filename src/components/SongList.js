@@ -1,13 +1,20 @@
-// src/components/SongList.js
-
 import React from 'react';
-import { ListGroup } from 'react-bootstrap';
+import { Button, ListGroup } from 'react-bootstrap';
 
-const SongList = ({ songs }) => {
+const SongList = ({ songs, albumName }) => {
+  const playSong = (song) => {
+    const audio = new Audio(`/assets/${albumName}-${song}.mp3`);
+    audio.play();
+  };
+
   return (
-    <ListGroup className="mt-3">
+    <ListGroup>
       {songs.map((song, index) => (
-        <ListGroup.Item key={index}>{song}</ListGroup.Item>
+        <ListGroup.Item key={index}>
+          <Button variant="link" onClick={() => playSong(song)}>
+            {song}
+          </Button>
+        </ListGroup.Item>
       ))}
     </ListGroup>
   );

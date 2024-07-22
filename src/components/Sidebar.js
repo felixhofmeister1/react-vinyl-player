@@ -1,5 +1,3 @@
-// src/components/Sidebar.js
-
 import React, { useState } from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
 
