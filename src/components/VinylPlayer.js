@@ -77,7 +77,7 @@ const VinylPlayer = ({ currentAlbum }) => {
     <div className="vinyl-player-container d-flex flex-column align-items-center justify-content-center">
       <Card className="text-center vinyl-player-card">
         <Card.Body>
-          <Card.Title></Card.Title>
+          <Card.Title>Vinyl Player</Card.Title>
           <div className="vinyl">
             <img
               src={

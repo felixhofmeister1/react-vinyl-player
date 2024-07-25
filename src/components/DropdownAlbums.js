@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Dropdown, Button } from 'react-bootstrap';
+import React from 'react';
+import { Dropdown } from 'react-bootstrap';
 import './DropdownAlbum.css';
 
 const DropdownAlbums = ({ selectAlbum }) => {
@@ -38,7 +38,7 @@ const DropdownAlbums = ({ selectAlbum }) => {
       <Dropdown.Menu>
         {albums.map((album) => (
           <Dropdown.Item key={album.id} onClick={() => selectAlbum(album)}>
-            <img src={`/assets/${album.albumName}-vinyl.png`} alt={album.albumName} className="album-icon" /> {album.albumName}
+            <img src={`${process.env.PUBLIC_URL}/assets/${album.albumName}-vinyl.png`} alt={album.albumName} className="album-icon" /> {album.albumName}
           </Dropdown.Item>
         ))}
       </Dropdown.Menu>

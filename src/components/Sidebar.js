@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
+import './Sidebar.css'; 
 
 const Sidebar = ({ selectAlbum }) => {
   const [albums] = useState([
@@ -42,7 +43,7 @@ const Sidebar = ({ selectAlbum }) => {
               onClick={() => selectAlbum(album)}
             >
               <div className="vinyl d-flex align-items-center justify-content-center">
-                <img src={`/assets/${album.albumName}-vinyl.png`} alt={album.albumName} className="vinyl-image img-fluid rounded-circle" />
+                <img src={`${process.env.PUBLIC_URL}/assets/${album.albumName}-vinyl.png`} alt={album.albumName} className="vinyl-image img-fluid rounded-circle" />
               </div>
               <div className="album-info">
                 <strong>{album.albumName}</strong><br />
