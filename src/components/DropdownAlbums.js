@@ -1,6 +1,5 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
-import './DropdownAlbum.css';
 
 const DropdownAlbums = ({ selectAlbum }) => {
   const albums = [
@@ -38,7 +37,13 @@ const DropdownAlbums = ({ selectAlbum }) => {
       <Dropdown.Menu>
         {albums.map((album) => (
           <Dropdown.Item key={album.id} onClick={() => selectAlbum(album)}>
-            <img src={`${process.env.PUBLIC_URL}/assets/${album.albumName}-vinyl.png`} alt={album.albumName} className="album-icon" /> {album.albumName}
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/${album.albumName.toLowerCase().replace(/\s+/g, '-')}-vinyl.png`} 
+              alt={album.albumName} 
+              className="album-thumbnail" 
+              style={{ width: '50px', height: '50px', objectFit: 'cover' }} 
+            />
+            {album.albumName}
           </Dropdown.Item>
         ))}
       </Dropdown.Menu>
