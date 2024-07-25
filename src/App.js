@@ -57,7 +57,12 @@ const DropdownAlbums = ({ selectAlbum }) => {
       <Dropdown.Menu>
         {albums.map((album) => (
           <Dropdown.Item key={album.id} onClick={() => selectAlbum(album)}>
-            <img src={`${process.env.PUBLIC_URL}/assets/${album.albumName.toLowerCase().replace(/\s+/g, '-')}-vinyl.png`} alt={album.albumName} className="album-thumbnail" /> {album.albumName}
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/${album.albumName.toLowerCase().replace(/\s+/g, '-')}-vinyl.png`} 
+              alt={album.albumName} 
+              className="album-thumbnail" 
+            /> 
+            {album.albumName}
           </Dropdown.Item>
         ))}
       </Dropdown.Menu>
@@ -65,4 +70,4 @@ const DropdownAlbums = ({ selectAlbum }) => {
   );
 };
 
-export default App
+export default App;
