@@ -1,5 +1,4 @@
 import React from 'react';
-import './VinylGallery.css';
 
 const VinylGallery = () => {
   return (
