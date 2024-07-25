@@ -77,7 +77,7 @@ const VinylPlayer = ({ currentAlbum }) => {
     <div className="vinyl-player-container d-flex flex-column align-items-center justify-content-center">
       <Card className="text-center vinyl-player-card">
         <Card.Body>
-          <Card.Title>Vinyl Player</Card.Title>
+          <Card.Title></Card.Title>
           <div className="vinyl">
             <img
               src={
@@ -87,7 +87,6 @@ const VinylPlayer = ({ currentAlbum }) => {
               }
               alt={currentAlbum ? currentAlbum.albumName : 'Placeholder Vinyl'}
               className={`vinyl-image img-fluid rounded-circle ${isSpinning ? 'vinyl-spinning' : ''}`}
-              style={{ width: '150px', height: '150px', objectFit: 'cover' }}
             />
           </div>
           {currentAlbum && (

@@ -11,6 +11,17 @@ function App() {
     setCurrentAlbum(album);
   };
 
+  return (
+    <div className="App">
+      <Container className="d-flex flex-column align-items-center justify-content-center">
+        <VinylPlayer currentAlbum={currentAlbum} />
+        <DropdownAlbums selectAlbum={selectAlbum} />
+      </Container>
+    </div>
+  );
+}
+
+const DropdownAlbums = ({ selectAlbum }) => {
   const albums = [
     {
       id: 1,
@@ -39,17 +50,6 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <Container className="d-flex flex-column align-items-center justify-content-center">
-        <VinylPlayer currentAlbum={currentAlbum} />
-        <DropdownAlbums albums={albums} selectAlbum={selectAlbum} />
-      </Container>
-    </div>
-  );
-}
-
-const DropdownAlbums = ({ albums, selectAlbum }) => {
-  return (
     <Dropdown className="my-4">
       <Dropdown.Toggle variant="primary" id="dropdown-albums">
         Select Album
@@ -57,13 +57,7 @@ const DropdownAlbums = ({ albums, selectAlbum }) => {
       <Dropdown.Menu>
         {albums.map((album) => (
           <Dropdown.Item key={album.id} onClick={() => selectAlbum(album)}>
-            <img 
-              src={`${process.env.PUBLIC_URL}/assets/${album.albumName.toLowerCase().replace(/\s+/g, '-')}-vinyl.png`} 
-              alt={album.albumName} 
-              className="album-thumbnail" 
-              style={{ width: '50px', height: '50px', objectFit: 'cover' }} 
-            /> 
-            {album.albumName}
+            <img src={`${process.env.PUBLIC_URL}/assets/${album.albumName.toLowerCase().replace(/\s+/g, '-')}-vinyl.png`} alt={album.albumName} className="album-thumbnail" /> {album.albumName}
           </Dropdown.Item>
         ))}
       </Dropdown.Menu>
@@ -71,4 +65,4 @@ const DropdownAlbums = ({ albums, selectAlbum }) => {
   );
 };
 
-export default App;
+export default App
