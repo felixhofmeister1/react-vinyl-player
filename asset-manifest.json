@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9f52714.css",
-    "main.js": "/static/js/main.1e9eb4d8.js",
-    "index.html": "/index.html",
-    "main.a9f52714.css.map": "/static/css/main.a9f52714.css.map",
-    "main.1e9eb4d8.js.map": "/static/js/main.1e9eb4d8.js.map"
+    "main.css": "/react-vinyl-player/static/css/main.a9f52714.css",
+    "main.js": "/react-vinyl-player/static/js/main.3a36bb2b.js",
+    "index.html": "/react-vinyl-player/index.html",
+    "main.a9f52714.css.map": "/react-vinyl-player/static/css/main.a9f52714.css.map",
+    "main.3a36bb2b.js.map": "/react-vinyl-player/static/js/main.3a36bb2b.js.map"
   },
   "entrypoints": [
     "static/css/main.a9f52714.css",
-    "static/js/main.1e9eb4d8.js"
+    "static/js/main.3a36bb2b.js"
   ]
 }
