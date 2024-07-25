@@ -1,13 +1,14 @@
 import React from 'react';
+import './VinylGallery.css';
 
 const VinylGallery = () => {
   return (
-    <div>
+    <div className="vinyl-gallery">
       <h1>Vinyl Collection</h1>
-      <img src="/images/metallica-vinyl.png" alt="Metallica Vinyl" />
-      <img src="/images/acdc-vinyl.png" alt="AC/DC Vinyl" />
-      <img src="/images/queen-vinyl.png" alt="Queen Vinyl" />
-      <img src="/images/abbey-road-vinyl.png" alt="Abbey Road Vinyl" />
+      <img src={`${process.env.PUBLIC_URL}/assets/metallica-vinyl.png`} alt="Metallica Vinyl" className="gallery-image" />
+      <img src={`${process.env.PUBLIC_URL}/assets/acdc-vinyl.png`} alt="AC/DC Vinyl" className="gallery-image" />
+      <img src={`${process.env.PUBLIC_URL}/assets/queen-vinyl.png`} alt="Queen Vinyl" className="gallery-image" />
+      <img src={`${process.env.PUBLIC_URL}/assets/abbey-road-vinyl.png`} alt="Abbey Road Vinyl" className="gallery-image" />
     </div>
   );
 };
