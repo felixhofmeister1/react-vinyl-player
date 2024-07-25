@@ -87,6 +87,7 @@ const VinylPlayer = ({ currentAlbum }) => {
               }
               alt={currentAlbum ? currentAlbum.albumName : 'Placeholder Vinyl'}
               className={`vinyl-image img-fluid rounded-circle ${isSpinning ? 'vinyl-spinning' : ''}`}
+              style={{ width: '150px', height: '150px', objectFit: 'cover' }}
             />
           </div>
           {currentAlbum && (

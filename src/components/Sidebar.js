@@ -43,7 +43,12 @@ const Sidebar = ({ selectAlbum }) => {
               onClick={() => selectAlbum(album)}
             >
               <div className="vinyl d-flex align-items-center justify-content-center">
-                <img src={`${process.env.PUBLIC_URL}/assets/${album.albumName}-vinyl.png`} alt={album.albumName} className="vinyl-image img-fluid rounded-circle" />
+                <img 
+                  src={`${process.env.PUBLIC_URL}/assets/${album.albumName.toLowerCase().replace(/\s+/g, '-')}-vinyl.png`} 
+                  alt={album.albumName} 
+                  className="vinyl-image img-fluid rounded-circle" 
+                  style={{ width: '60px', height: '60px', objectFit: 'cover' }} 
+                />
               </div>
               <div className="album-info">
                 <strong>{album.albumName}</strong><br />
